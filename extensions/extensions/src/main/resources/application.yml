@@ -1,0 +1,52 @@
+spring:
+  application:
+    name: extensions
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: mysecretpassword
+  sql:
+    init:
+      mode: always
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+
+###############################################################################
+# radarアプリ
+            clientId: Ov23li90fe3LCjm6hFoy
+            clientSecret: 69fe3fc66882e3fb210e372cb36bb40c84b67666
+###############################################################################
+# 今回のアプリ
+#            client-id: Iv23liRRJp370RknUMkm
+#            client-secret: ccdd173343464f640ae760c15d5fd5bd336ab677
+###############################################################################
+
+            scope: admin:org, admin:enterprise, user
+
+server:
+  port: 8086
+
+extension:
+  githubcopilot:
+    url: https://api.github.com/
+    version: 2022-11-28
+  scheduler:
+    metrics: "0 0 1-23/6 * * *"
+    user: "0 0 0 * * *"
+  adminOrganization:
+    name: CopilotTechnicalSurvey
+  inactiveLimitDays: 7
+  defaultPastDays: 28
+  enterprises:
+    group:
+      enterprise: nttdata-copilot-enterprise
+      business: nttdatacopilotbusiness
+      copilot: nttdata-github
+      kirin: ntt-data-corporation-kirin-div
+    team:
+      forced_team: xgGHCPInner
+  admin:
+    accounts: '{"ntt-data-corporation-kirin-div":"admin-nttdata","businesnttdata-copilot-enterprise":"nttd_admin"}'

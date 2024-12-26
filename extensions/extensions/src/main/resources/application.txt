@@ -1,0 +1,28 @@
+spring.application.name=extensions
+server.port=8086
+
+spring.datasource.url=jdbc:postgresql://localhost:5432/postgres
+spring.datasource.username=postgres
+spring.datasource.password=mysecretpassword
+
+spring.sql.init.mode=always
+
+spring.security.oauth2.client.registration.github.client-id=Iv23liRRJp370RknUMkm
+spring.security.oauth2.client.registration.github.client-secret=ccdd173343464f640ae760c15d5fd5bd336ab677
+spring.security.oauth2.client.registration.github.scope=admin:org,admin:enterprise,user
+spring.security.oauth2.client.registration.github.redirect-uri={baseUrl}/login/oauth2/code/github
+spring.security.oauth2.client.registration.github.client-name=GitHub
+
+extension.githubcopilot.url=https://api.github.com/
+extension.githubcopilot.version=2022-11-28
+extension.scheduler.metrics=0 0 1-23/6 * * *
+extension.scheduler.user=0 0 0 * * *
+extension.adminOrganization.name=CopilotTechnicalSurvey
+extension.inactiveLimitDays=7
+extension.defaultPastDays=28
+extension.enterprises.group.enterprise=nttdata-copilot-enterprise
+extension.enterprises.group.business=nttdatacopilotbusiness
+extension.enterprises.group.copilot=nttdata-github
+extension.enterprises.group.kirin=ntt-data-corporation-kirin-div
+extension.enterprises.team.forced_team=xgGHCPInner
+extension.admin.accounts={"ntt-data-corporation-kirin-div":"admin-nttdata","businesnttdata-copilot-enterprise":"nttd_admin"}

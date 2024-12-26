@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-ExtensionsApplication<extensions>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.nttdata.extensions.extensions.ExtensionsApplication",
+            "projectName": "extensions",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
